@@ -22,7 +22,7 @@ const NavBar = ({handleChangeCurrentView})=>{
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active fw-bold" href="#">Home</a>
+                  <a className="nav-link active fw-bold" href="#" onClick={() => {handleChangeCurrentView('home')}}>Home</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link fw-bold" href="#">TV Shows</a>
