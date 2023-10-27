@@ -41,8 +41,8 @@ const NavBar = ({handleChangeCurrentView})=>{
                 <BiSearch className="text-white me-2" style={{fontSize: '24px'}}/>
                 <div id="kids" className="fw-bold me-2"><p className="text-white mb-0">KIDS</p></div>
                 <BiBell className="text-white me-2" style={{fontSize: '24px'}}/>
-                <BiUserCircle onClick={() => {handleChangeCurrentView('profile')}} className="text-white me-2" style={{fontSize: '24px'}}/>
-                <BsFillGearFill onClick={() => {handleChangeCurrentView('settings')}} className="text-white me-2" style={{fontSize: '20px'}}/>
+                <BiUserCircle onClick={() => {handleChangeCurrentView('profile')}} className="text-white me-2" style={{fontSize: '24px', cursor: 'pointer'}}/>
+                <BsFillGearFill onClick={() => {handleChangeCurrentView('settings')}} className="text-white me-2" style={{fontSize: '20px', cursor: 'pointer'}}/>
               </div>
             </div>
           </div>
