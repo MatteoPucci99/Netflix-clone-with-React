@@ -1,14 +1,13 @@
-
 import logo from "../assets/logo.png"
 import { BiSearch, BiBell,  BiUserCircle } from 'react-icons/bi';
 import {BsFillGearFill} from 'react-icons/bs'
 
 
-const NavBar = ()=>{
+const NavBar = ({handleChangeCurrentView})=>{
     return (
         <nav className="navbar navbar-expand-lg" data-bs-theme="dark" style={{ backgroundColor: '#221f1f !important' }}>
           <div className="container-fluid">
-            <a className="navbar-brand" href="#"><img src={logo} style={{ width: '100px' }} alt="logo"/></a>
+            <a className="navbar-brand" onClick={() => {handleChangeCurrentView('home')}} href="#"><img src={logo} style={{ width: '100px' }} alt="logo"/></a>
             <button
               className="navbar-toggler"
               type="button"
@@ -42,8 +41,8 @@ const NavBar = ()=>{
                 <BiSearch className="text-white me-2" style={{fontSize: '24px'}}/>
                 <div id="kids" className="fw-bold me-2"><p className="text-white mb-0">KIDS</p></div>
                 <BiBell className="text-white me-2" style={{fontSize: '24px'}}/>
-                <BiUserCircle className="text-white me-2" style={{fontSize: '24px'}}/>
-                <BsFillGearFill className="text-white me-2" style={{fontSize: '20px'}}/>
+                <BiUserCircle onClick={() => {handleChangeCurrentView('profile')}} className="text-white me-2" style={{fontSize: '24px'}}/>
+                <BsFillGearFill onClick={() => {handleChangeCurrentView('settings')}} className="text-white me-2" style={{fontSize: '20px'}}/>
               </div>
             </div>
           </div>
