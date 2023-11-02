@@ -6,19 +6,23 @@ import ShowContent from "./components/ShowContent";
 import Footer from "./components/Footer";
 import ProfilePage from "./components/ProfilePage";
 import SettingsPage from "./components/SettingsPage";
-import React, { useState } from "react";
-function App() {
-  const [currentView, setCurrentView] = useState("home");
-  const handleChangeCurrentView = (viewInput) => setCurrentView(viewInput);
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Tvshows from "./components/Tvshows";
 
+function App() {
   return (
-    <Container fluid className="bg-default position-relative">
-      <NavBar handleChangeCurrentView={handleChangeCurrentView} />
-      {currentView === "home" && <ShowContent />}
-      {currentView === "profile" && <ProfilePage />}
-      {currentView === "settings" && <SettingsPage />}
-      <Footer />
-    </Container>
+    <BrowserRouter>
+      <Container fluid className="bg-default position-relative">
+        <NavBar />
+        <Routes>
+          <Route element={<ShowContent />} path="/" />
+          <Route element={<ProfilePage />} path="/profilepage" />
+          <Route element={<SettingsPage />} path="/settingspage" />
+          <Route element={<Tvshows />} path="/tvshows" />
+        </Routes>
+        <Footer />
+      </Container>
+    </BrowserRouter>
   );
 }
 
