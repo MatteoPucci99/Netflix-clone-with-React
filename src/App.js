@@ -8,6 +8,7 @@ import ProfilePage from "./components/ProfilePage";
 import SettingsPage from "./components/SettingsPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Tvshows from "./components/Tvshows";
+import MovieDetail from "./components/MovieDetail";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route element={<ProfilePage />} path="/profilepage" />
           <Route element={<SettingsPage />} path="/settingspage" />
           <Route element={<Tvshows />} path="/tvshows" />
+          <Route element={<MovieDetail />} path="/moviedetail/:filmId" />
         </Routes>
         <Footer />
       </Container>
